@@ -1,4 +1,4 @@
-import Counter from "./Counter.svelte";
+import Counter from "$lib/Counter/index.svelte";
 import { render, fireEvent } from "@testing-library/svelte";
 
 it("it works", async () => {

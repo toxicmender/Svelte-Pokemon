@@ -1,5 +1,5 @@
 {
-  "name": "svelte-pokedex",
+  "name": "svelte-pokemon",
   "version": "0.0.1",
   "scripts": {
     "dev": "svelte-kit dev",
@@ -9,16 +9,18 @@
     "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
     "lint": "prettier --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
     "format": "prettier --write --plugin-search-dir=. .",
-    "test": "jest",
-    "test:watch": "jest --watch"
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest",
+    "test:watch": "npm run test -- --watch"
   },
   "devDependencies": {
+    "@babel/core": "^7.14.6",
     "@babel/preset-env": "^7.14.7",
     "@sveltejs/kit": "next",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/svelte": "^3.0.3",
     "@types/cookie": "^0.4.0",
     "@types/jest": "^26.0.23",
+    "@types/node": "^16.0.0",
     "@typescript-eslint/eslint-plugin": "^4.19.0",
     "@typescript-eslint/parser": "^4.19.0",
     "babel-jest": "^26.0.1",
